@@ -6,7 +6,7 @@
 
 ## Development
 
-During development it is recommended to use the profile `local`. In IntelliJ `-Dspring.profiles.active=local` can be
+During development, it is recommended to use the profile `local`. In IntelliJ `-Dspring.profiles.active=local` can be
 added in the VM options of the Run Configuration after enabling this property in "Modify options". Create your own
 `application-local.yml` file to override settings for development.
 
@@ -20,7 +20,14 @@ The application can be built using the following command:
 mvnw clean install
 ```
 
-Start your application with the following command - here with the profile `production`:
+Create database as the Spring config file `jetdevs_test`
+
+```
+jdbc:mysql://localhost:3306/jetdevs_test
+```
+* You can use an environment variable for your custom db setting
+
+Start your application with the following command in your local environment:
 
 ```
 mvnw spring-boot:run
